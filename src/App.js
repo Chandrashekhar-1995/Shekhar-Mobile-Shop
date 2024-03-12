@@ -1,10 +1,16 @@
-import './App.css';
+import { RouterProvider } from "react-router-dom";
+import AppLayout from "./component/AppLayout";
+import { appRouter } from "./component/AppLayout";
 
-function App() {
+
+const App = () => {
   return (
     <div>
-      <h1 className='bg-red-800 text-4xl' >Shekhar mobile Shop </h1>
+      <RouterProvider router={appRouter}>
+        <AppLayout/>
+      </RouterProvider>
     </div>
+    
   );
 }
 
