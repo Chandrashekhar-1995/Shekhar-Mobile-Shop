@@ -2,8 +2,12 @@ import React from 'react'
 import {Outlet, createBrowserRouter } from 'react-router-dom';
 import Header from './Header';
 import Body from "./Body";
+import Services from "./Services";
+import Offers from "./Offers";
+import Membership from "./Membership";
 import AboutPage from "./AboutPage";
 import ContactPage from "./ContactPage";
+import Login from "./Login";
 import Error from "./Error";
 import Footer from './Footer';
 
@@ -30,13 +34,29 @@ export const appRouter = createBrowserRouter([
         element: <Body/>
       },
       {
+        path: "/services",
+        element: <Services/>
+      },
+      {
+        path: "/offers",
+        element: <Offers/>
+      },
+      {
+        path: "/membership",
+        element: <Membership/>
+      },
+      {
         path: "/about",
         element: <AboutPage/>
       },
-          {
-            path: "/contact",
-            element: <ContactPage/>
-          } ,        
+      {
+        path: "/login",
+        element: <Login/>
+      },
+      {
+        path: "/contact",
+        element: <ContactPage/>
+      } ,        
         ],
     errorElement: <Error/>,
   },
