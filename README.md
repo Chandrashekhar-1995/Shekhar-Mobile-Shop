@@ -9,3 +9,5 @@
     - Create userSlice and cartSlice and connect with Store
     - Setup Header
     - login form
+    - check email and password valid
+    - setup firebase account
