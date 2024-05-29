@@ -7,3 +7,4 @@
     - connect mongodb
     - cooention port fot listing
     -- npm i cookie-parser cors
+    - api response and error standerd
