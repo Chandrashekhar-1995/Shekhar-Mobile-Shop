@@ -1,4 +1,6 @@
 import mongoose, { Schema } from "mongoose";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 const userSchema = new Schema(
     {
@@ -67,5 +69,15 @@ const userSchema = new Schema(
         timestamps: true,
     }
 )
+
+userSchema.pre("save", async function (next) {
+    if (!this.isModified("password")) return next();
+    this.password = bcrypt.hash(this.password, 8)
+    next()
+})
+
+userSchema.methods.isPasswordCurrect = async function (password) {
+    return await bcrypt.compare(password, this.password)
+}
 
 export const User = mongoose.model("User", userSchema);
