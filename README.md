@@ -18,4 +18,5 @@
     - user and product model
     - jws token
     - cloudnary upload utility
+    - multer install and write middleware
     - npm i slugify
