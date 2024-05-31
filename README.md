@@ -16,3 +16,5 @@
     - Tocken create karne ke liye
     -- npm i jsonwebtoken
     - user and product model
+    - jws token
+    - npm i slugify
