@@ -17,4 +17,5 @@
     -- npm i jsonwebtoken
     - user and product model
     - jws token
+    - cloudnary upload utility
     - npm i slugify
