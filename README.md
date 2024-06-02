@@ -19,4 +19,5 @@
     - jws token
     - cloudnary upload utility
     - multer install and write middleware
+    - register user url = http://localhost:8080/api/v1/users/register
     - npm i slugify

@@ -1,4 +1,4 @@
-import express from "express";
+import express  from "express";
 import cors from "cors";
 import { LISTEN_DATA_LIMIT } from "./constants.js";
 import cookieParser from "cookie-parser";
@@ -10,16 +10,19 @@ app.use(cors({
     credentials: true
 }))
 
-
 //Security / best practices
 app.use(express.json({ limit: LISTEN_DATA_LIMIT }))
-// data from url
 app.use(express.urlencoded({ extended: true, limit: LISTEN_DATA_LIMIT }))
-
 app.use(express.static("public"))
-
 // save secure cookies in browser
 app.use(cookieParser())
-    
+
+
+//routes import 
+import userRouter from './routes/user.routes.js'
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
 
 export {app}

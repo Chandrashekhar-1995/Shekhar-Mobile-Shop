@@ -29,8 +29,8 @@ const userSchema = new Schema(
             type: String,// cloudanery url
             required:true
         },
-        mobileNumber: {
-            type:mobileNumber,
+        phone: {
+            type:String,
             unique: true,
             index:true
         },
@@ -40,14 +40,14 @@ const userSchema = new Schema(
         purchaseHistory: [
             {
                 type: Schema.Types.ObjectId,
-                ref:Product
+                ref:"Product"
             }
         ],
         dateoFBirth: {
-            type:dateoFBirth,
+            type:Date,
         },
         marrigeAniversary: {
-            type:marrigeAniversary,
+            type:Date,
         },
         bio: {
             type: String,
@@ -70,7 +70,7 @@ const userSchema = new Schema(
     }
 )
 
-uuserSchema.pre("save", async function (next) {
+userSchema.pre("save", async function (next) {
     if(!this.isModified("password")) return next();
 
     this.password = await bcrypt.hash(this.password, 10)
