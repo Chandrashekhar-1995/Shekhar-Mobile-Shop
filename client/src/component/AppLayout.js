@@ -1,8 +1,9 @@
 import React from 'react'
 import {Outlet, createBrowserRouter } from 'react-router-dom';
 import Header from './Header';
-import Body from "./Body";
+import Home from "./Home";
 import Services from "./Services";
+import Shop from "./Shop";
 import Offers from "./Offers";
 import Membership from "./Membership";
 import AboutPage from "./AboutPage";
@@ -31,7 +32,11 @@ export const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body/>
+        element: <Home/>
+      },
+      {
+        path: "/shop",
+        element: <Shop/>
       },
       {
         path: "/services",
@@ -62,4 +67,4 @@ export const appRouter = createBrowserRouter([
   },
 ]);
 
-export default Body;
+export default Home;

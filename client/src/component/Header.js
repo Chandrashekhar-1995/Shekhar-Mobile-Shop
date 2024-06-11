@@ -11,6 +11,7 @@ const Header = () => {
       <div>
         <ul className="flex my-12 mx-10">
             <li className="mx-2"><Link to="/"> HOME </Link></li>
+            <li className="mx-2"><Link to="/shop"> SHOP </Link></li>
             <li className="mx-2"><Link to="/services"> SERVICES </Link></li>
             <li className="mx-2"><Link to="/offers"> OFFERS </Link></li>
             <li className="mx-2"><Link to="/membership"> MEMBERSHIP </Link></li>
