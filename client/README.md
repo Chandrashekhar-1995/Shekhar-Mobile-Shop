@@ -15,3 +15,4 @@
     - Home Page
     - About page
     - Product list
+    - crousel setup

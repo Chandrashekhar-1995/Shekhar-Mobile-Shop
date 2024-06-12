@@ -5,7 +5,7 @@ import { ROBOTEK_5C, CCR35, SC221 } from "../../utils/productData";
 const GridCardLayout = () => {
   return (
     <div>
-      <section className="flex items-center justify-center py-16 bg-gray-200">
+      <section className="flex items-center justify-center py-8  mb-4">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
 
             <div className="md:w-1/4  m-2 bg-white cursor-pointer hover:scale-110 transition">
