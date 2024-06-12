@@ -12,3 +12,5 @@
     - check email and password valid
     - setup firebase account
     - error page set
+    - Home Page
+    - About page

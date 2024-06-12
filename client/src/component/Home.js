@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { CHANDRA_IMG } from "../utils/constants";
+import { CHANDRA_IMG, USER_ICON } from "../utils/constants";
+
 
 const Home = () => {
   return (
@@ -77,17 +78,17 @@ const Home = () => {
           <p className="text-lg mb-6 text-gray-600">Here are a few reasons why our customers choose us over the competition.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex flex-col items-center">
-              <img src="/quality-icon.png" alt="Quality" className="w-20 h-20 mb-4" />
+              <img src={USER_ICON} alt="Quality" className="w-20 h-20 mb-4" />
               <h3 className="text-xl font-bold text-gray-800">High Quality</h3>
               <p className="text-gray-600">We provide high-quality products and services that you can trust.</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/support-icon.png" alt="Support" className="w-20 h-20 mb-4" />
+              <img src={USER_ICON} alt="Support" className="w-20 h-20 mb-4" />
               <h3 className="text-xl font-bold text-gray-800">24/7 Support</h3>
               <p className="text-gray-600">Our team is here to help you anytime, day or night.</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/affordable-icon.png" alt="Affordable" className="w-20 h-20 mb-4" />
+              <img src={USER_ICON} alt="Affordable" className="w-20 h-20 mb-4" />
               <h3 className="text-xl font-bold text-gray-800">Affordable Prices</h3>
               <p className="text-gray-600">We offer competitive prices on all our products and services.</p>
             </div>
@@ -104,7 +105,7 @@ const Home = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <p className="text-gray-600">"Great service and very professional. My phone was fixed in no time!"</p>
               <div className="mt-4 flex items-center">
-                <img src="/customer1.jpg" alt="Customer 1" className="w-12 h-12 rounded-full mr-4" />
+                <img src={USER_ICON} alt="Customer 1" className="w-12 h-12 rounded-full mr-4" />
                 <div>
                   <h3 className="text-lg font-bold text-gray-800">John Doe</h3>
                   <p className="text-gray-600">Customer</p>
@@ -114,7 +115,7 @@ const Home = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <p className="text-gray-600">"Excellent customer support. They helped me find the right accessories for my phone."</p>
               <div className="mt-4 flex items-center">
-                <img src="/customer2.jpg" alt="Customer 2" className="w-12 h-12 rounded-full mr-4" />
+                <img src={USER_ICON} alt="Customer 2" className="w-12 h-12 rounded-full mr-4" />
                 <div>
                   <h3 className="text-lg font-bold text-gray-800">Jane Smith</h3>
                   <p className="text-gray-600">Customer</p>
