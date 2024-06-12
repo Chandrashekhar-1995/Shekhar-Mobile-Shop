@@ -14,3 +14,4 @@
     - error page set
     - Home Page
     - About page
+    - Product list
