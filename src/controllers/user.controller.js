@@ -25,10 +25,10 @@ const generateAccessAndRefereshTokens = async(userId) =>{
 }
 
 const registerUser = asyncHandler( async (req, res) => {
-    const {fullName, email, username, password } = req.body
+    const {fullName, email, username, password, phone } = req.body
 
     if (
-        [fullName, email, username, password].some((field) => field?.trim() === "")
+        [fullName, email, username, password, phone ].some((field) => field?.trim() === "")
     ) {
         throw new ApiError(400, "All fields are required")
     }
@@ -42,25 +42,26 @@ const registerUser = asyncHandler( async (req, res) => {
     }
 
     //Upload image
-    const avatarLocalPath = req.files?.avatar[0]?.path;
+    // const avatarLocalPath = req.files?.avatar[0]?.path;
 
-    if (!avatarLocalPath) {
-        throw new ApiError(400, "Avatar file is required")
-    }
+    // if (!avatarLocalPath) {
+    //     throw new ApiError(400, "Avatar file is required")
+    // }
 
-    const avatar = await uploadOnCloudinary(avatarLocalPath)
+    // const avatar = await uploadOnCloudinary(avatarLocalPath)
 
-    if (!avatar) {
-        throw new ApiError(400, "Avatar file is required")
-    }
+    // if (!avatar) {
+    //     throw new ApiError(400, "Avatar file is required")
+    // }
    
 
     const user = await User.create({
         fullName,
-        avatar: avatar.url,
+        // avatar: avatar.url,
         email, 
         password,
-        username: username.toLowerCase()
+        username: username.toLowerCase(),
+        phone,
     })
 
     const createdUser = await User.findById(user._id).select(

@@ -27,8 +27,7 @@ const userSchema = new Schema(
         },
         avatar: {
             type: String,// cloudanery url
-            required: true,
-            default:"http://res.cloudinary.com/chandrashekhar/image/upload/v1717332666/drlgqpgmr43vj8rqidxm.jpg"
+            // default:"http://res.cloudinary.com/chandrashekhar/image/upload/v1717332666/drlgqpgmr43vj8rqidxm.jpg"
         },
         phone: {
             type:String,
