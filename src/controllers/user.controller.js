@@ -155,6 +155,7 @@ const logoutUser = asyncHandler(async(req, res) => {
         httpOnly: true,
         secure: true
     }
+    console.log(User._id);
 
     return res
     .status(200)

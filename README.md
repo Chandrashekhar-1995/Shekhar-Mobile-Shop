@@ -23,3 +23,5 @@
     - npm i slugify
     - chech and debug user rejister url
     - login url - http://localhost:8080/api/v1/users/login
+    - auth.middleware  me veryfyJWT
+    - logout link - http://localhost:8080/api/v1/users/logout
