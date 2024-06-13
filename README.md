@@ -22,3 +22,4 @@
     - register user url = http://localhost:8080/api/v1/users/register
     - npm i slugify
     - chech and debug user rejister url
+    - login url - http://localhost:8080/api/v1/users/login
