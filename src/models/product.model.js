@@ -3,9 +3,15 @@ import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 
 const productSchema = new Schema(
     {
-        productname: {
+        productName: {
             type: String,
             required: [true, "product name is required"],
+            unique: true,
+            trim: true,
+            index:true
+        },
+        itemCode: {
+            type: String,
             unique: true,
             lowercase: true,
             trim: true,
@@ -25,18 +31,15 @@ const productSchema = new Schema(
         saleHistory: [
             {
                 type: Schema.Types.ObjectId,
-                ref:User
+                ref:"User"
             }
         ],
         purchaseHistory: [
             {
                 type: Schema.Types.ObjectId,
-                ref:User
+                ref:"User"
             }
         ],
-        refreshToken: {
-            type: String,
-        },
     },
     {
         timestamps: true,
