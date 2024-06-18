@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const categorySchema = new Schema(
     {
-        name: {
+        categoryName: {
             type: String,
             required: true,
             unique:true,

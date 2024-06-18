@@ -27,3 +27,4 @@
     - logout link - http://localhost:8080/api/v1/users/logout
     - refreshToken
     - product register
+    - register category link - http://localhost:8080/api/v1/category/register
