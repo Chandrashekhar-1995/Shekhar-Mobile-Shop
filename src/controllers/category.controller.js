@@ -5,7 +5,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 
 
 const registerCategory = asyncHandler(async (req, res) => {
-    const { categoryName } = req.body
+    const { categoryName, categoryCode } = req.body
     
     if (
         [categoryName].some((field) => field?.trim() === "")
@@ -21,6 +21,7 @@ const registerCategory = asyncHandler(async (req, res) => {
 
     const category = await Category.create({
         categoryName,
+        categoryCode,
     })
     
     if (!category) {
@@ -32,4 +33,33 @@ const registerCategory = asyncHandler(async (req, res) => {
     )
 })
 
-export {registerCategory}
+const getCategories = asyncHandler(async (req, res) => {
+    const categories = await Category.find();
+    return res
+    .status(200)
+    .json(new ApiResponse(
+        200,
+        categories,
+        "Categories fetched successfully"
+    ))
+})
+
+const getCategoryById = asyncHandler(async (req, res) => {
+
+    const category = await Category.findOne(req.body.params);
+    
+    return res
+    .status(200)
+    .json(new ApiResponse(
+        200,
+        req.params.id,
+        "Category fetched successfully"
+    ))
+})
+
+
+export {
+    registerCategory,
+    getCategories,
+    getCategoryById
+}

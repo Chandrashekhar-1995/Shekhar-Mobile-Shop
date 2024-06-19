@@ -17,6 +17,11 @@ const productSchema = new Schema(
             trim: true,
             index:true
         },
+        category: [{
+            type: Schema.Types.ObjectId,
+            ref: "Category",
+            required: true,
+        }],
         productImage: {
             type: String,// cloudanery url
         },
@@ -27,6 +32,9 @@ const productSchema = new Schema(
         salePrice: {
             type:Number,
             required:true
+        },
+        description: {
+            type: String,
         },
         saleHistory: [
             {
