@@ -16,3 +16,5 @@
     - About page
     - Product list
     - crousel setup
+    - install react-icons
+    - setup header search
