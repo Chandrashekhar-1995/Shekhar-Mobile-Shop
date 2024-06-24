@@ -44,6 +44,10 @@ const Header = () => {
             </div>
           </div>
           
+          <div>
+          <button className="px-3 py-1 rounded-full text-white bg-red-600 hover:bg-red-700"> <Link to="/login" >Login </Link></button>
+          </div>
+
         </div>
 
       </div>

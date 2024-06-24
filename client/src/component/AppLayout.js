@@ -1,15 +1,15 @@
 import React from 'react'
 import {Outlet, createBrowserRouter } from 'react-router-dom';
 import Header from './Header';
-import Home from "./Home";
-import Services from "./Services";
-import Shop from "./Shop";
-import Offers from "./Offers";
-import Membership from "./Membership";
-import AboutPage from "./AboutPage";
-import ContactPage from "./ContactPage";
-import Login from "./Login";
-import Error from "./Error";
+import Home from "../pages/Home";
+import Services from "../pages/Services";
+import Shop from "../pages/Shop";
+import Offers from"../pages/Offers";
+import Membership from"../pages/Membership";
+import AboutPage from "../pages/AboutPage";
+import ContactPage from "../pages/ContactPage";
+import Login from "../pages/Login";
+import Error from "../pages/Error";
 import Footer from './Footer';
 
 
