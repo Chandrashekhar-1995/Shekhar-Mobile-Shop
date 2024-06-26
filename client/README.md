@@ -18,3 +18,4 @@
     - crousel setup
     - install react-icons
     - setup header search
+    - upload image
