@@ -19,3 +19,4 @@
     - install react-icons
     - setup header search
     - upload image
+    - make login ans signup page separate because code look lenthy

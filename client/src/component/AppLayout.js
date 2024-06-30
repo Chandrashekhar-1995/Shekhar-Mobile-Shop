@@ -11,6 +11,7 @@ import ContactPage from "../pages/ContactPage";
 import Login from "../pages/Login";
 import Error from "../pages/Error";
 import Footer from './Footer';
+import SignUp from '../pages/SignUp';
 
 
 
@@ -53,6 +54,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage/>
+      },
+      {
+        path: "/sign-up",
+        element: <SignUp/>
       },
       {
         path: "/login",
